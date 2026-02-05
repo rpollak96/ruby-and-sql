@@ -60,8 +60,15 @@ puts apple["url"]
 
 apple["url"] = "https://www.apple.com"
 apple.save
-p apple
+# p apple
 
 apple =Company.find_by({ "name" => "Apple"})
 puts apple["url"]
 # 7. delete a row
+
+# apple.destroy
+puts "Companies: #{Company.all.count}"
+companies = Company.all
+for company in companies 
+  puts company["name"]
+end
